@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,19 +10,23 @@
     />
     <link rel="stylesheet" href="css/output.css" />
   </head>
-  <body class="bg-gray-900 text-gray-300 font-bodyFont">
+  <body class="bg-gray-900 text-gray-300 font-bodyFont scroll-smooth">
     <div class="main-container px-10 grid md:grid-cols-3 xl:grid-cols-5">
-      <div class="navigation text-right pt-2">
+      <div class="navigation text-right pt-2" id="home">
         <div
           class="title text-3xl font-bold p-5 border-b border-gray-600 text-secondary-200 text-center"
         >
-          <a href="#"><span class="text-secondary-100">Games</span> Website</a>
+          <a href="#home"
+            ><span class="text-secondary-100">Games</span> Website</a
+          >
         </div>
         <div class="links">
           <div
             class="link px-5 py-3 hover-effect bg-gray-500 bg-opacity-25 border-r-2 flex justify-end items-center transition-effect"
           >
-            <div class="text font-semibold text-gray-50">Home</div>
+            <div class="text font-semibold text-gray-50">
+              <a href="#home">Home</a>
+            </div>
             <div class="icon ml-3 text-xl">
               <i class="bx bxs-home"></i>
             </div>
@@ -30,7 +34,7 @@
           <div
             class="link px-5 py-3 hover-effect flex justify-end items-center transition-effect"
           >
-            <div class="text">About</div>
+            <div class="text"><a href="#about">About</a></div>
             <div class="icon ml-3 text-xl">
               <i class="bx bxs-help-circle"></i>
             </div>
@@ -38,7 +42,7 @@
           <div
             class="link px-5 py-3 hover-effect flex justify-end items-center transition-effect"
           >
-            <div class="text">Contact</div>
+            <div class="text"><a href="#contact">Contact</a></div>
             <div class="icon ml-3 text-xl">
               <i class="bx bxs-envelope"></i>
             </div>
@@ -291,16 +295,126 @@
               </div>
             </div>
           </section>
-          <div
-            class="load-more text-xl font-simibold bg-secondary-200 text-gray-900 flex justify-center py-2"
-          >
-            <a
-              href="#"
-              class="hover:text-white hover:text-2xl transition-effect"
-              >Load More</a
-            >
-          </div>
         </div>
+        <div
+          class="load-more text-xl font-simibold bg-secondary-200 text-gray-900 flex justify-center py-2"
+        >
+          <a href="#" class="hover:text-white hover:text-2xl transition-effect"
+            >Load More</a
+          >
+        </div>
+        <div class="about-content" id="about">
+          <div
+            class="text-2xl md:text-3xl font-bold text-yellow-500 py-5 border-b border-yellow-500 mb-5"
+          >
+            About Us
+          </div>
+          <p class="text-xl leading-relaxed">
+            [Company Name] is a premier game development studio known for
+            creating captivating and innovative gaming experiences. Established
+            in [Year], we specialize in [type of games, e.g., AAA, indie,
+            mobile, VR/AR] that push the boundaries of interactive
+            entertainment. Our mission is to deliver high-quality games with
+            compelling narratives and stunning visuals. We value innovation,
+            quality, community, and diversity, believing that these principles
+            lead to richer experiences for our players. Notable titles like
+            [Game Title 1] and [Game Title 2] showcase our dedication to
+            crafting unforgettable worlds and characters. Join us on our journey
+            to redefine the future of gaming.
+          </p>
+        </div>
+        <div class="contact-us" id="contact">
+          <div
+            class="text-2xl md:text-3xl font-bold text-yellow-500 py-5 border-b border-yellow-500 mb-5"
+          >
+            Contact Us
+          </div>
+          <form action="" class="w-full">
+            <div class="mb-4">
+              <label
+                class="w-full text-xl font-bold block py-2 text-yellow-500"
+                for="name"
+                >Name:</label
+              >
+              <input
+                class="w-full p-2 text-green-500 tex-xl"
+                type="text"
+                id="name"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="w-full text-xl font-bold block py-2 text-yellow-500"
+                for="email"
+                >Email:</label
+              >
+              <input
+                class="w-full p-2 text-green-500 tex-xl"
+                type="text"
+                id="email"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="w-full text-xl font-bold block py-2 text-yellow-500"
+                for="description"
+                >Message:</label
+              >
+              <textarea
+                name=""
+                id="description"
+                rows="4"
+                class="w-full p-2 text-green-500 tex-xl resize-none"
+              ></textarea>
+            </div>
+            <div class="mb-4">
+              <input
+                type="submit"
+                value="Send"
+                class="bg-blue-500 px-4 py-2 font-bold rounded-sm text-white cursor-pointer hover:bg-blue-800 transition-effect"
+              />
+            </div>
+          </form>
+        </div>
+        <footer>
+          <div
+            class="text-2xl md:text-3xl font-bold text-yellow-500 py-5 border-b border-yellow-500 mb-5"
+          >
+            Footer
+          </div>
+          <div
+            class="footer-content grid grid-cols-2 sm:grid-cols-3 items-center text-xl space-y-3"
+          >
+            <ul class="links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo hidden sm:block">
+              <img src="imgs/logo.png" alt="Logo" class="w-full h-full" />
+            </div>
+            <ul class="social flex justify-end space-x-3 text-3xl">
+              <li>
+                <a href="#"><i class="bx bxl-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="copyright text-xl font-simibold bg-secondary-200 text-gray-900 flex justify-center mt-3 sm:mt-3 py-2"
+          >
+            <div class="text-center">copyright &copy; All rights are reserved 2024</d>
+            <div class="text-center">Designed by Eng. Hamada Reda</div>
+          </div>
+        </footer>
       </main>
     </div>
   </body>
